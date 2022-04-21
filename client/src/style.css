@@ -358,10 +358,11 @@ select {
     border: solid 1px var(--clr-blk);
     background-color: var(--clr-2nd);
     position: relative;
+    overflow: hidden;
 }
 
 .card-filler {
-    height: 54.5vh;
+    height: 54.7vh;
     width: 88.98vh;
     background-color: var(--clr-char);
     border-radius: 27.5vh;
@@ -379,25 +380,24 @@ select {
 
 .card-caption {
     color: var(--clr-main);
-    padding: 1em;
-    background-color: #0000009d;
+    padding: 0.3em;
+    background-color: #000000c0;
 }
 
 .card-desc {
-    padding: 1em;
-    background-color: var(--clr-blk);
+    padding-top: 0.3em;
     display:flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .item-desc {
-    color: var(--clr-main);
+    color: var(--clr-blk);
 }
 
 .add-to-cart {
     border-radius: 0px;
-    border: 1px solid var(--clr-2nd);
+    border: 1px solid var(--clr-blk);
     background-color: var(--clr-blk);
     color: var(--clr-2nd);
     padding-inline: 1em;
@@ -424,7 +424,7 @@ select {
 }
 
 .mini-card-desc {
-    padding: 0.3em;
+    padding-top: 0.3em;
     display:flex;
     justify-content: space-between;
     align-items: center;

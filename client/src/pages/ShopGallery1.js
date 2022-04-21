@@ -22,13 +22,13 @@ const ShopGallery1 = () => {
             </div>
 
             <div className="card-footer">
-                <p className="card-caption">[Closet] Hoodie</p>
+                <p className="card-caption">[CLOSET] HOODIE</p>
                 <p className="card-caption">34.99 $</p>
             </div>
 
 </div>
 <div className="card-desc">
-    <p className="item-desc">Black Hoodie, Mens Size Medium</p>
+    <p className="item-desc">BLACK HOODIE, MENS SIZE MEDIUM</p>
     <button className="add-to-cart">ADD TO CART</button>
 </div>
 
