@@ -1,4 +1,5 @@
 import React from "react";
+import product1 from "../assets/product1.png"
 
 const ShopGallery = () => {
 
@@ -13,38 +14,57 @@ const ShopGallery = () => {
         <div className="subnav-parent"></div>
 
     <div className="login-form">
-        <h2 className="tf-h2">SHOP</h2> 
+        <h2 className="tf-h2">SHOP</h2>
+
+        <div className="row">
+
         <div>
-        <div className="shop-card">
-            <div className="card-filler">
+        <div className="mini-shop-card">
+            <div className="mini-card-filler">
+                <img src={product1}></img>
             </div>
-
-            <div className="card-footer">
-                <p className="card-caption">ITEM NAME</p>
-                <p className="card-caption">ITEM PRICE</p>
-            </div>
-
 </div>
-<div className="card-desc">
-    <p className="item-desc">Item Description/Variables</p>
-    <button className="add-to-cart">ADD TO CART</button>
+<div className="mini-card-desc">
+    <p className="form-label">[CLOSET] HOODIE</p>
+</div>
 </div>
 
+<div>
+        <div className="mini-shop-card">
+            <div className="mini-card-filler">
+                <img src={product1}></img>
+            </div>
+</div>
+<div className="mini-card-desc">
+    <p className="form-label">PRODUCT 2</p>
+</div>
+</div>
+
+<div>
+        <div className="mini-shop-card">
+            <div className="mini-card-filler">
+                <img src={product1}></img>
+            </div>
+</div>
+<div className="mini-card-desc">
+    <p className="form-label">PRODUCT 3</p>
+</div>
+</div>
+        
+        
         </div>
         
     </div>
 
         <div className="subnav-parent">
             <div className="subnav subnav-active"></div>
-            <div className="subnav"></div>
-            <div className="subnav"></div>
         </div>
 
     </div>
 
     <div className="btn-parent" >
 
-    <div className="arrow-right"></div>
+    <div className="arrow-none"></div>
     </div>
     </div>
     </>

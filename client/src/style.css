@@ -16,7 +16,7 @@
 
     --fs-9: 7rem;
     --fs-8: 5rem;
-    --fs-7: 3.5rem;
+    --fs-7: 4.5rem;
     --fs-6: 2rem;
     --fs-5: 1.75rem;
     --fs-4: 1.25rem;
@@ -205,10 +205,10 @@ select {
 }
 
 .headerh1 {
-    font-size: var(--fs-8);
+    font-size: var(--fs-7);
     background-color: var(--clr-blk);
     color: var(--clr-2nd);
-    padding: 0.7rem 1.5rem 0.7rem 0.5rem;
+    padding: 0.5rem 1.5rem 0.5rem 0.5rem;
     font-style: italic;
     font-family: var(--ff-s)
 }
@@ -224,7 +224,7 @@ select {
     padding: 0.5em 1.5em;
     overflow: hidden;
     height: 2.6em;
-    gap: 0.5em;
+    gap: 1em;
 }
 
 .navheader {
@@ -365,6 +365,7 @@ select {
     width: 88.98vh;
     background-color: var(--clr-char);
     border-radius: 27.5vh;
+    overflow: hidden;
 }
 
 .card-footer {
@@ -379,7 +380,7 @@ select {
 .card-caption {
     color: var(--clr-main);
     padding: 1em;
-    background-color: #00000080;
+    background-color: #0000009d;
 }
 
 .card-desc {
@@ -402,6 +403,38 @@ select {
     padding-inline: 1em;
 }
 
+.mini-shop-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30vh;
+    width: 48.54vh;
+    border: solid 1px var(--clr-blk);
+    background-color: var(--clr-2nd);
+    position: relative;
+    overflow: hidden;
+}
+
+.mini-card-filler {
+    height: 29.7vh;
+    width: 48.52vh;
+    background-color: var(--clr-char);
+    border-radius: 15vh;
+    overflow: hidden;
+}
+
+.mini-card-desc {
+    padding: 0.3em;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.row {
+    display: flex;
+    gap: 2em;
+
+}
 
 
 

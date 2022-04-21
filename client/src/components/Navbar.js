@@ -6,7 +6,7 @@ const AppNavbar = () => {
   return (
     <>
       <header className="App-header">
-        <h1 className="headerh1">[Closet]</h1>
+        <h1 className="headerh1">.shop()</h1>
         <div className="navparent">
           <nav className="navheader activenav">SHOP</nav>
           <nav className="navheader">ACCOUNT</nav>
