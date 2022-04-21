@@ -1,0 +1,387 @@
+/*---------------*/
+/* Custom Props  */
+/*---------------*/
+
+:root {
+    --clr-main: #DDE1E1;
+    --clr-2nd: #CFF54E;
+    --clr-3rd: #D2B7A4;
+    --clr-char: #DEDDE3;
+    --clr-blk: #000000;
+    --clr-wht: #FFFFFF;
+
+    --ff-l: 'Barlow Condensed', serif;
+    --ff-m: 'Bebas Neue', sans-serif;
+    --ff-s: 'Poppins', sans-serif;
+
+    --fs-9: 7rem;
+    --fs-8: 5rem;
+    --fs-7: 3.5rem;
+    --fs-6: 2rem;
+    --fs-5: 1.75rem;
+    --fs-4: 1.25rem;
+    --fs-3: 1rem;
+    --fs-2: 0.875rem;
+
+    --ls-1: 1.8px; 
+    --ls-2: 2.35px;
+    --ls-3: 4.75px;
+    --ls-4: 8px;
+
+}
+
+/*---------------*/
+/* Reset         */
+/*---------------*/
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+    margin: 0;
+    font-weight: 400;
+}
+
+
+body {
+    line-height: 1.5;
+    min-height: 100vh;
+    font-family: var(--ff-l);
+    background-color: #DDE1E1;
+}
+
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/*---------------*/
+/* Utilities     */
+/*---------------*/
+
+.flex {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.grid {
+    display: grid;
+    gap: 1rem;
+}
+
+.wrapper {
+    padding-inline: 2em;
+    margin-inline: auto;
+    max-width: 80rem;
+    justify-content: space-between;
+}
+
+.wrapper-full {
+    padding: 1em 2em 0;
+    margin-inline: auto;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.wrapper-none {
+    margin-inline: auto;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.spacer {
+    margin: 1rem 0;
+}
+
+.center {
+    justify-content: center;
+}
+
+.eventlimiter {
+    height:fit-content;
+    overflow: hidden;
+}
+
+.push-parent {
+    min-height: 52vh;
+    margin-bottom: 3em;
+}
+
+
+/*---------------*/
+/* Colours       */
+/*---------------*/
+
+.bg-main {
+    background-color:var(--clr-main);
+}
+
+.bg-2nd {
+    background-color:rgb( var(--clr-2nd));
+}
+
+.bg-3rd {
+    background-color:rgb( var(--clr-3rd));
+}
+
+.bg-black {
+    background-color:rgb( var(--clr-blk));
+}
+
+.bg-char {
+    background-color: rgb( var(--clr-char));
+}
+
+.text-main {
+    color:rgb( var(--clr-main));
+}
+
+.text-2nd {
+    color:rgb( var(--clr-2nd));
+}
+
+.text-3rd {
+    color:rgb( var(--clr-3rd));
+}
+
+.text-black {
+    color: rgb( var(--clr-blk));
+}
+
+.text-white {
+    color: rgb( var(--clr-wht));
+}
+
+
+/*----------------------*/
+/* Colour Components    */
+/*----------------------*/
+
+
+
+/*------------------------*/
+/* Typeface Components    */
+/*------------------------*/
+
+.tf-h2 {
+    font-family: var(--ff-m);
+    letter-spacing: var(--ls-4);
+    font-size: var(--fs-6);
+    text-transform: uppercase;
+    text-align: center;
+}
+
+/*------------------------*/
+/* General Components    */
+/*------------------------*/
+
+.App-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: fixed;
+    width: 100%;
+    top: 0px;
+}
+
+.headerh1 {
+    font-size: var(--fs-8);
+    background-color: var(--clr-blk);
+    color: var(--clr-2nd);
+    padding: 0.7rem 1.5rem 0.7rem 0.5rem;
+    font-style: italic;
+    font-family: var(--ff-s)
+}
+
+.navparent {
+    display:flex;
+    background-color: var(--clr-blk);
+    min-width: 6em;
+    font-family: var(--ff-m);
+    font-size: var(--fs-4);
+    text-align: center;
+    margin: 0.5em;
+    padding: 0.5em 1.5em;
+    overflow: hidden;
+    height: 2.6em;
+    gap: 0.5em;
+}
+
+.navheader {
+    color: var(--clr-main);
+}
+
+.activenav {
+    color: var(--clr-2nd);
+
+}
+
+.fullscreen-div {
+    height: 100vh;
+    width:100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.column {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.subnav-parent {
+    height: 3em;
+    min-width: 3em;
+    display: flex;
+    gap: 1em;
+    align-items: center;
+    justify-content: center;
+}
+
+.subnav {
+    height: 7px;
+    width: 7px;
+    border: solid 1px var(--clr-blk);
+    border-radius: 50%;
+}
+
+.subnav-active {
+    background-color: var(--clr-blk);
+}
+
+.arrow-left {
+	width: 0;
+	height: 0;
+	border-top: 25px solid transparent;
+	border-right: 50px solid var(--clr-blk);
+	border-bottom: 25px solid transparent;
+  margin-right: 1em;
+}
+
+.arrow-right {
+	width: 0;
+	height: 0;
+	border-top: 25px solid transparent;
+	border-left: 50px solid var(--clr-blk);
+	border-bottom: 25px solid transparent;
+  margin-left: 1em;
+}
+
+.btn-parent {
+    padding: 1em;
+}
+
+.arrow-none {
+	width: 50px;
+	height: 50px;
+  margin-left: 1em;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    min-height: 55vh;
+    justify-content: space-between;
+    gap: 1em;
+}
+
+.signup-form {
+    display: flex;
+    flex-direction: column;
+    min-height: 55vh;
+    justify-content: space-between;
+    gap: 1em
+}
+
+.form-group {
+    display:flex;
+    flex-direction: column;
+}
+
+.form-input {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid var(--clr-blk);
+    min-width: 15em;
+}
+
+.form-input:focus {
+  outline: none;
+  border: none;
+  border-bottom: 1px solid var(--clr-blk);
+}
+
+.form-label {
+    font-size: var(--fs-3);
+    font-family: var(--ff-l);
+}
+
+.submit-btn {
+    background-color: var(--clr-blk);
+    color: var(--clr-2nd);
+    border-radius: 0px ;
+    border: none;
+    margin-top: 0.5em;
+    text-transform: uppercase;
+    padding: 0.3em;
+}
+
+.shop-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 55vh;
+    width: 88.99vh;
+    border: solid 1px var(--clr-blk);
+    background-color: var(--clr-2nd);
+    position: relative;
+}
+
+.card-filler {
+    height: 54.5vh;
+    width: 88.98vh;
+    background-color: var(--clr-char);
+    border-radius: 27.5vh;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 1em;
+    min-width: 100%;
+    position: absolute;
+    bottom: 0px;
+    background-color: #00000080
+}
+
+.card-caption {
+    color: var(--clr-main)
+}
+
+
+
+
