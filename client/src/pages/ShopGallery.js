@@ -14,7 +14,7 @@ const ShopGallery = () => {
 
     <div className="login-form">
         <h2 className="tf-h2">SHOP</h2> 
-
+        <div>
         <div className="shop-card">
             <div className="card-filler">
             </div>
@@ -24,7 +24,11 @@ const ShopGallery = () => {
                 <p className="card-caption">ITEM PRICE</p>
             </div>
 
-
+</div>
+<div className="card-desc">
+    <p className="item-desc">Item Description/Variables</p>
+    <button className="add-to-cart">ADD TO CART</button>
+</div>
 
         </div>
         
@@ -32,6 +36,7 @@ const ShopGallery = () => {
 
         <div className="subnav-parent">
             <div className="subnav subnav-active"></div>
+            <div className="subnav"></div>
             <div className="subnav"></div>
         </div>
 

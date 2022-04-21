@@ -4,6 +4,8 @@ import { ApolloProvider } from "@apollo/react-hooks";
 import ApolloClient from "apollo-boost";
 
 import ShopGallery from './pages/ShopGallery';
+import ShopGallery2 from './pages/ShopGallery2';
+import ShopGallery3 from './pages/ShopGallery3';
 import ShopCart from './pages/ShopCart';
 import LoginPage from './pages/Login';
 import SignUp from './pages/SignUp';
@@ -31,6 +33,8 @@ function App() {
           <Navbar />
           <Switch>
             <Route exact path="/" component={ShopGallery} />
+            <Route exact path="/2" component={ShopGallery2} />
+            <Route exact path="/3" component={ShopGallery3} />
             <Route exact path="/cart" component={ShopCart} />
             <Route exact path="/login" component={LoginPage} />
             <Route exact path="/signup" component={SignUp} />

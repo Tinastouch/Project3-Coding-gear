@@ -371,15 +371,35 @@ select {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    padding: 1em;
     min-width: 100%;
     position: absolute;
     bottom: 0px;
-    background-color: #00000080
 }
 
 .card-caption {
-    color: var(--clr-main)
+    color: var(--clr-main);
+    padding: 1em;
+    background-color: #00000080;
+}
+
+.card-desc {
+    padding: 1em;
+    background-color: var(--clr-blk);
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item-desc {
+    color: var(--clr-main);
+}
+
+.add-to-cart {
+    border-radius: 0px;
+    border: 1px solid var(--clr-2nd);
+    background-color: var(--clr-blk);
+    color: var(--clr-2nd);
+    padding-inline: 1em;
 }
 
 
