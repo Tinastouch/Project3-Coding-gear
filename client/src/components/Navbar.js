@@ -1,52 +1,44 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { Link, NavLink, withRouter } from 'react-router-dom';
 
 import Auth from '../utils/auth';
 
-const AppNavbar = () => {
+const AppNavbar = ({ location }) => {
+
+  const [currentLocation, setCurrentLocation] = useState();
+
+  useEffect(() => {
+    setCurrentLocation(location.pathname);
+  }, [location]);
+
+  useEffect(() => {
+    console.log("currentLocation", currentLocation);
+  }, [currentLocation])
 
   return (
     <>
       <header className="App-header">
-        <h1 className="headerh1">
-          <Link to='/'>.shop()</Link> 
+        <h1>
+          <Link to='/' className="headerh1">.shop()</Link> 
         </h1>
         <div className="navparent">
-          <nav className="navheader activenav">
-            <Link to='/'>SHOP</Link> 
-          </nav>
+        <NavLink to='/' className={`${currentLocation === "/" ? "activenav" : "navheader"}`}>SHOP</NavLink>
           {Auth.loggedIn() ? (
             <>
-              <nav className="navheader">
-                <Link to='/user'>ACCOUNT</Link>
-              </nav>
-              <nav className="navheader">
-                <Link to='/cart'>CART</Link>
-              </nav>
-              <nav className="navheader">
-                <Link onClick={Auth.logout}>LOGOUT</Link>
-              </nav>
+              <NavLink to='/user' className={`${currentLocation === "/user" ? "activenav" : "navheader"}`}>ACCOUNT</NavLink>
+              <NavLink to='/cart' className={`${currentLocation === "/cart" ? "activenav" : "navheader"}`}>CART</NavLink>
+              <NavLink onClick={Auth.logout} className="navheader">LOGOUT</NavLink>
             </>
           ) : (
             <>
-              <nav className="navheader">
-                <Link to='/login'>CART</Link>
-              </nav>
-              <nav className="navheader">
-                <Link to='/login'>LOGIN</Link>
-              </nav>
-              <nav className="navheader">
-                <Link to='/signup'>SIGN-UP</Link>
-              </nav>
+              <NavLink to='/login' className={`${currentLocation === "/login" ? "activenav" : "navheader"}`}>LOGIN</NavLink>
+              <NavLink to='/signup' className={`${currentLocation === "/signup" ? "activenav" : "navheader"}`}>SIGN-UP</NavLink>
             </>
           )}
-          {/* <nav className="navheader">ACCOUNT</nav>
-          <nav className="navheader">CART</nav>
-          <nav className="navheader">LOGOUT</nav> */}
         </div>
       </header>
     </>
   );
 };
 
-export default AppNavbar;
+export default withRouter(AppNavbar);
