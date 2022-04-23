@@ -1,5 +1,7 @@
 import React from "react";
 import product1 from "../assets/product1.png"
+import { Link, NavLink, withRouter } from 'react-router-dom';
+
 
 const ShopGallery1 = () => {
 
@@ -46,11 +48,11 @@ const ShopGallery1 = () => {
 
     <div className="btn-parent" >
 
-    <div className="arrow-right"></div>
+    <NavLink to="/2"><div className="arrow-right"></div></NavLink>
     </div>
     </div>
     </>
   );
 };
 
-export default ShopGallery1;
+export default withRouter(ShopGallery1);

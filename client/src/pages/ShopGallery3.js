@@ -1,4 +1,5 @@
 import React from "react";
+import { Link, NavLink, withRouter } from 'react-router-dom';
 
 const ShopGallery3 = () => {
 
@@ -6,7 +7,10 @@ const ShopGallery3 = () => {
       <>
       <div className="fullscreen-div">
           <div className="btn-parent">
-          <div className="arrow-left"></div></div>
+          <NavLink to="/2"><div className="arrow-left"></div></NavLink>
+          
+          </div>
+        
   
           <div className="column">
   
@@ -51,4 +55,4 @@ const ShopGallery3 = () => {
     );
   };
   
-  export default ShopGallery3;
+  export default withRouter(ShopGallery3);
