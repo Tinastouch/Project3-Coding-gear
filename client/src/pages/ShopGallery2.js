@@ -1,5 +1,6 @@
 import React from "react";
-import product2 from "../assets/product2.jpg"
+import product2 from "../assets/product2.jpg";
+import { Link, NavLink, withRouter } from 'react-router-dom';
 
 const ShopGallery2 = () => {
 
@@ -7,7 +8,8 @@ const ShopGallery2 = () => {
       <>
       <div className="fullscreen-div">
           <div className="btn-parent">
-          <div className="arrow-left"></div></div>
+          <NavLink to="/1"><div className="arrow-left"></div></NavLink>
+          </div>
   
           <div className="column">
   
@@ -43,14 +45,15 @@ const ShopGallery2 = () => {
           </div>
   
       </div>
-  
+
       <div className="btn-parent" >
+
+    <NavLink to="/3"><div className="arrow-right"></div></NavLink>
+    </div>
+    </div>
   
-      <div className="arrow-right"></div>
-      </div>
-      </div>
       </>
     );
   };
   
-  export default ShopGallery2;
+  export default withRouter(ShopGallery2);
