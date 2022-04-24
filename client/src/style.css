@@ -226,7 +226,7 @@ select {
 }
 
 .blackbox {
-    background: url(assets/elephantprint.png), #000000c0;
+    background: url(assets/elephantprint.png), #000000de;
     background-blend-mode: multiply;
 }
 
@@ -433,7 +433,7 @@ select {
 
 .qty-btn {
     border-radius: 0px;
-    border: 1px solid var(--clr-2nd);
+    border: 1px solid var(--clr-blk);
     background-color: var(--clr-blk);
     color: var(--clr-2nd);
     margin: 0 1em;
