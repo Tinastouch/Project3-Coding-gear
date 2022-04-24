@@ -219,6 +219,7 @@ select {
     transform: scaleY(0.7);
     transform-origin: 0 0;
     margin-bottom: -70%;
+    display: inline-block;
 }
 
 
