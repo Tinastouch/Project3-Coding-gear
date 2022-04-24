@@ -205,12 +205,16 @@ select {
 }
 
 .headerh1 {
-    font-size: var(--fs-7);
+    font-size: var(--fs-8);
     background-color: var(--clr-blk);
     color: var(--clr-2nd);
     padding: 0.5rem 1.5rem 0.5rem 0.5rem;
     font-style: italic;
-    font-family: var(--ff-s)
+    font-family: var(--ff-s);
+    letter-spacing: -0.06em;
+    transform: scaleY(0.7);
+    transform-origin: 0 0;
+    margin-bottom: -70%;
 }
 
 .navparent {
@@ -434,6 +438,10 @@ select {
     display: flex;
     gap: 2em;
 
+}
+
+.cart-cat {
+    min-width: 5em;
 }
 
 
