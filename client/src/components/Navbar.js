@@ -18,7 +18,7 @@ const AppNavbar = ({ location }) => {
   return (
     <>
       <header className="App-header">
-        <h1>
+        <h1 className="blackbox">
           <Link to='/' className="headerh1">.shop()</Link> 
         </h1>
         <div className="navparent">

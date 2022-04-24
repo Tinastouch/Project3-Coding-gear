@@ -210,7 +210,10 @@ select {
 
 .headerh1 {
     font-size: var(--fs-8);
-    background-color: var(--clr-blk);
+    background: var(--clr-2nd);
+    background-blend-mode: multiply;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
     color: var(--clr-2nd);
     padding: 0.5rem 1.5rem 0.5rem 0.5rem;
     font-style: italic;
@@ -220,6 +223,11 @@ select {
     transform-origin: 0 0;
     margin-bottom: -70%;
     display: inline-block;
+}
+
+.blackbox {
+    background: url(assets/elephantprint.png), #000000c0;
+    background-blend-mode: multiply;
 }
 
 
