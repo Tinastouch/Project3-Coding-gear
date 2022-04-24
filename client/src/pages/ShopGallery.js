@@ -1,5 +1,6 @@
 import React from "react";
 import product1 from "../assets/product1.png"
+import product2 from "../assets/product2.jpg"
 
 const ShopGallery = () => {
 
@@ -32,11 +33,11 @@ const ShopGallery = () => {
 <div>
         <div className="mini-shop-card">
             <div className="mini-card-filler">
-                <img src={product1}></img>
+                <img src={product2}></img>
             </div>
 </div>
 <div className="mini-card-desc">
-    <p className="form-label">PRODUCT 2</p>
+    <p className="form-label">.SHOP() MASK</p>
 </div>
 </div>
 

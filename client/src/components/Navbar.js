@@ -27,7 +27,7 @@ const AppNavbar = ({ location }) => {
             <>
               <NavLink to='/user' className={`${currentLocation === "/user" ? "activenav" : "navheader"}`}>ACCOUNT</NavLink>
               <NavLink to='/cart' className={`${currentLocation === "/cart" ? "activenav" : "navheader"}`}>CART</NavLink>
-              <NavLink onClick={Auth.logout} className="navheader">LOGOUT</NavLink>
+              <NavLink to="#" onClick={Auth.logout} className="navheader">LOGOUT</NavLink>
             </>
           ) : (
             <>

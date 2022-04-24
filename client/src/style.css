@@ -41,6 +41,10 @@
     -webkit-font-smoothing: antialiased;
 }
 
+a, a:hover, a:focus, a:active {
+    text-decoration: none;
+}
+
 body,
 h1,
 h2,
@@ -205,13 +209,20 @@ select {
 }
 
 .headerh1 {
-    font-size: var(--fs-7);
+    font-size: var(--fs-8);
     background-color: var(--clr-blk);
     color: var(--clr-2nd);
     padding: 0.5rem 1.5rem 0.5rem 0.5rem;
     font-style: italic;
-    font-family: var(--ff-s)
+    font-family: var(--ff-s);
+    letter-spacing: -0.06em;
+    transform: scaleY(0.7);
+    transform-origin: 0 0;
+    margin-bottom: -70%;
+    display: inline-block;
 }
+
+
 
 .navparent {
     display:flex;
@@ -304,6 +315,14 @@ select {
     display: flex;
     flex-direction: column;
     min-height: 55vh;
+    justify-content: space-between;
+    gap: 1em;
+}
+
+.cart-form {
+    display: flex;
+    flex-direction: column;
+    min-height: 35vh;
     justify-content: space-between;
     gap: 1em;
 }
@@ -403,6 +422,21 @@ select {
     padding-inline: 1em;
 }
 
+.qty-btn {
+    border-radius: 0px;
+    border: 1px solid var(--clr-2nd);
+    background-color: var(--clr-blk);
+    color: var(--clr-2nd);
+    margin: 0 1em;
+    height: 1.2rem;
+    line-height: -0.5em;
+    font-size: var(--fs-2)
+}
+
+.negativemarg {
+    margin-top: -0.2em;
+}
+
 .mini-shop-card {
     display: flex;
     justify-content: center;
@@ -434,6 +468,20 @@ select {
     display: flex;
     gap: 2em;
 
+}
+
+.cart-cat {
+    min-width: 5em;
+    display: flex;
+    align-items: center;
+}
+
+.flex-end {
+    justify-content: flex-end;
+}
+
+.checkout {
+    padding-inline: 1.35em;
 }
 
 
