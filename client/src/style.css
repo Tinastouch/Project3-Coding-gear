@@ -41,6 +41,10 @@
     -webkit-font-smoothing: antialiased;
 }
 
+a, a:hover, a:focus, a:active {
+    text-decoration: none;
+}
+
 body,
 h1,
 h2,
@@ -217,6 +221,8 @@ select {
     margin-bottom: -70%;
 }
 
+
+
 .navparent {
     display:flex;
     background-color: var(--clr-blk);
@@ -308,6 +314,14 @@ select {
     display: flex;
     flex-direction: column;
     min-height: 55vh;
+    justify-content: space-between;
+    gap: 1em;
+}
+
+.cart-form {
+    display: flex;
+    flex-direction: column;
+    min-height: 35vh;
     justify-content: space-between;
     gap: 1em;
 }
@@ -407,6 +421,21 @@ select {
     padding-inline: 1em;
 }
 
+.qty-btn {
+    border-radius: 0px;
+    border: 1px solid var(--clr-2nd);
+    background-color: var(--clr-blk);
+    color: var(--clr-2nd);
+    margin: 0 1em;
+    height: 1.2rem;
+    line-height: -0.5em;
+    font-size: var(--fs-2)
+}
+
+.negativemarg {
+    margin-top: -0.2em;
+}
+
 .mini-shop-card {
     display: flex;
     justify-content: center;
@@ -442,6 +471,16 @@ select {
 
 .cart-cat {
     min-width: 5em;
+    display: flex;
+    align-items: center;
+}
+
+.flex-end {
+    justify-content: flex-end;
+}
+
+.checkout {
+    padding-inline: 1.35em;
 }
 
 
