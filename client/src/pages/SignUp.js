@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 import Auth from '../utils/auth';
 import { ADD_USER } from '../utils/mutations';
@@ -36,7 +36,7 @@ import { ADD_USER } from '../utils/mutations';
         <>
         <div className="fullscreen-div">
         <div className="btn-parent">
-        <div className="arrow-left"></div></div>
+        <NavLink to='/login'><div className="arrow-left"></div></NavLink></div>
     
             <div className="column">
     
