@@ -65,6 +65,7 @@ export const QUERY_USER = gql`
           price
           quantity
           image
+        }  
       }
     }
   }
