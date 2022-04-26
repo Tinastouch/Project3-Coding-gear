@@ -20,7 +20,7 @@ const ShopCart = () => {
                 <form className="login-form change-password">
                 <h2 className="tf-h2">CART</h2>
 
-                <div className="row">
+                <div className="row cartrow">
                     <div className="form-group">
                         <p className="form-input" spellcheck="false">STEVEDUSOME@GMAIL.COM</p>
                         <label className="form-label">ITEM NAME</label>
@@ -43,7 +43,7 @@ const ShopCart = () => {
                     </div>
                     <button type="delete" className="add-to-cart">DELETE ITEM</button></div> 
 
-                    <div className="row">
+                    <div className="row cartrow">
                     <div className="form-group">
                         <p className="form-input" spellcheck="false">STEVEDUSOME@GMAIL.COM</p>
                         <label className="form-label">ITEM NAME</label>
@@ -66,7 +66,7 @@ const ShopCart = () => {
                     </div>
                     <button type="delete" className="add-to-cart">DELETE ITEM</button></div> 
 
-                    <div className="row">
+                    <div className="row cartrow">
                     <div className="form-group">
                         <p className="form-input" spellcheck="false">STEVEDUSOME@GMAIL.COM</p>
                         <label className="form-label">ITEM NAME</label>

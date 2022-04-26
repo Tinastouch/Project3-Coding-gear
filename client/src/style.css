@@ -56,6 +56,13 @@ p {
     font-weight: 400;
 }
 
+html, body {
+    display: flex;
+        min-height: 100vh;
+        height: fit-content;
+        flex-grow: 1;       
+  }
+
 
 body {
     line-height: 1.5;
@@ -486,6 +493,141 @@ select {
 .checkout {
     padding-inline: 1.35em;
 }
+
+@media screen and (max-width: 1024px) {
+
+    .row {
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        height:fit-content;
+    }
+
+    .cartrow {
+        border: 1px solid #000000;
+        margin-bottom: 2em;
+        padding: 1em;
+    }
+
+}
+
+
+@media screen and (max-width: 768px) {
+    .App-header {
+      padding-bottom: 0;
+      justify-content: center;
+      position: relative;
+      height: fit-content;
+      flex-direction: column;
+      align-items: center;
+      background-color: #000000;
+      border: 1px solid #000000;
+    }
+
+    .headerh1 {
+        background-color: #000000;
+        background-blend-mode: none;
+    }
+
+    .shop-card {
+        display: flex;
+        flex-shrink: 1;
+    }
+    
+    .card-filler {
+        flex-shrink: 1;
+    }
+    
+    .fullscreen-div {
+        min-height: 100vh;
+            height: fit-content;
+            width:100vw;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-grow: 1;
+        }
+
+}  
+
+@media screen and (max-width: 425px) {
+
+    .shop-card {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 30vh;
+        width: 100%;
+        border: solid 1px var(--clr-blk);
+        background-color: var(--clr-2nd);
+        position: relative;
+        overflow: hidden;
+        margin: 0 auto;
+        
+    }
+    
+    .card-filler {
+        height: 29.7vh;
+        width: 48.52vh;
+        background-color: var(--clr-char);
+        border-radius: 15vh;
+        overflow: hidden;
+        
+    }
+
+    .card-desc {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .add-to-cart {
+        margin-top: 0.3em;
+        padding: 0.3em;
+        width: 100%;
+    }
+
+    .arrow-left {
+        width: 0;
+        height: 0;
+        border-top: 15px solid transparent;
+        border-right: 30px solid var(--clr-blk);
+        border-bottom: 15px solid transparent;
+      margin-right: 0em;
+    }
+    
+    .arrow-right {
+        width: 0;
+        height: 0;
+        border-top: 15px solid transparent;
+        border-left: 30px solid var(--clr-blk);
+        border-bottom: 15px solid transparent;
+      margin-left: 0em;
+    }
+    
+    
+    .arrow-none {
+        width: 30px;
+        height: 30px;
+      margin-left: 0em;
+    }
+    
+        
+    .mini-shop-card {
+        display: flex;
+flex-shrink: 1;
+    }
+    
+    .mini-card-filler {
+        flex-shrink: 1;
+    }
+
+    .btn-parent{ padding: 0em; }
+
+    .row {
+        gap: 0.5em;
+    }
+        
+}  
 
 
 
