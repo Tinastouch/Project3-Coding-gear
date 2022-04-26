@@ -54,7 +54,7 @@ const ShopGalleryItem = ({ item }) => {
             ? (
               <>
                 <div className="btn-parent">
-                  <NavLink to="/1"><div className="arrow-left"></div></NavLink>
+                <NavLink to={`/${Number(_id)-1}`}><div className="arrow-left"></div></NavLink>
                 </div>
               </>
             ) : (
@@ -96,9 +96,21 @@ const ShopGalleryItem = ({ item }) => {
           </div>
 
           <div className="subnav-parent">
-            <div className="subnav"></div>
-            <div className="subnav subnav-active"></div>
-            <div className="subnav"></div>
+            {
+              (_id == "1")
+                ? (<div className="subnav subnav-active"></div>)
+                : (<div className="subnav"></div>)
+            }
+            {
+              (_id == "2")
+                ? (<div className="subnav subnav-active"></div>)
+                : (<div className="subnav"></div>)
+            }
+            {
+              (_id == "3")
+                ? (<div className="subnav subnav-active"></div>)
+                : (<div className="subnav"></div>)
+            }
           </div>
 
         </div>
@@ -109,7 +121,7 @@ const ShopGalleryItem = ({ item }) => {
             ? (
               <>
                 <div className="btn-parent" >
-                  <NavLink to="/3"><div className="arrow-right"></div></NavLink>
+                <NavLink to={`/${Number(_id)+1}`}><div className="arrow-right"></div></NavLink>
                 </div>
               </>
             ) : (

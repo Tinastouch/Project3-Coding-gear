@@ -50,7 +50,7 @@ function App() {
               name: "HOODIE",
               _id: "1",
               description: "BLACK HOODIE, MENS SIZE MEDIUM",
-              price: "34.99",
+              price: "35.00",
               quantity: "35"
             }}/>}/>
             <Route exact path="/2" render={() => <ShopGalleryItem item={{
@@ -58,7 +58,7 @@ function App() {
               name: "MASK",
               _id: "2",
               description: "BLACK .SHOP() MASK, ONE SIZE FITS ALL",
-              price: "5.99",
+              price: "5.00",
               quantity: "10"
             }}/>}/>
             {/* <Route exact path="/3" component={ShopGallery3} /> */}
@@ -67,7 +67,7 @@ function App() {
               name: "MUG",
               _id: "3",
               description: "COFFEE MUGS 8-12 FL OZ",
-              price: "7.99",
+              price: "7.00",
               quantity: "20"
             }}/>}/>
             <Route exact path="/cart" component={ShopCart} />
