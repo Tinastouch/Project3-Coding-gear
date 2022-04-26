@@ -477,6 +477,7 @@ select {
 
 .row {
     display: flex;
+    flex-wrap: wrap;
     gap: 2em;
 
 }
@@ -655,7 +656,7 @@ flex-shrink: 1;
     .btn-parent{ padding: 0em; }
 
     .row {
-        gap: 0.5em;
+        gap: 1.3em;
     }
         
 }  
