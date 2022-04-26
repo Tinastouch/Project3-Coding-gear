@@ -496,6 +496,11 @@ select {
 
 @media screen and (max-width: 1024px) {
 
+    .column {
+        min-height: 100vh;
+        height: fit-content;
+    }
+
     .row {
         flex-wrap: wrap;
         justify-content: center;
