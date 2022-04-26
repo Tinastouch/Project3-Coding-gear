@@ -41,7 +41,7 @@ const ShopCart = () => {
                         <p className="form-input cart-cat">15.00</p>
                         <label className="form-label">TOTAL</label>
                     </div>
-                    <button type="delete" className="add-to-cart">DELETE ITEM</button></div> 
+                    <button type="delete" className="add-to-cart delete-btn">DELETE ITEM</button></div> 
 
                     <div className="row cartrow">
                     <div className="form-group">
@@ -64,7 +64,7 @@ const ShopCart = () => {
                         <p className="form-input cart-cat">15.00</p>
                         <label className="form-label">TOTAL</label>
                     </div>
-                    <button type="delete" className="add-to-cart">DELETE ITEM</button></div> 
+                    <button type="delete" className="add-to-cart delete-btn">DELETE ITEM</button></div> 
 
                     <div className="row cartrow">
                     <div className="form-group">
@@ -87,7 +87,7 @@ const ShopCart = () => {
                         <p className="form-input cart-cat">15.00</p>
                         <label className="form-label">TOTAL</label>
                     </div>
-                    <button type="delete" className="add-to-cart">DELETE ITEM</button></div> 
+                    <button type="delete" className="add-to-cart delete-btn">DELETE ITEM</button></div> 
 
                     <div className="row flex-end">
                     
@@ -95,7 +95,7 @@ const ShopCart = () => {
                         <p className="form-input cart-cat">45.00</p>
                         <label className="form-label">TOTAL</label>
                     </div>
-                    <button type="delete" className="add-to-cart checkout">CHECKOUT</button></div> 
+                    <button type="delete" className="add-to-cart delete-btn checkout">CHECKOUT</button></div> 
 
                 </form>
 

@@ -509,11 +509,7 @@ select {
         height:fit-content;
     }
 
-    .cartrow {
-        border: 1px solid #000000;
-        margin-bottom: 2em;
-        padding: 1em;
-    }
+
 
 }
 
@@ -554,6 +550,26 @@ select {
             flex-grow: 1;
         }
 
+    .cartrow {
+        border: 1px solid #000000;
+        margin-bottom: 1em;
+        padding: 1em;
+    }
+
+    .flex-end {
+        margin-inline: 1em;
+    }
+
+    .form-group {
+        flex-grow: 1;
+        flex-shrink: 1;
+
+    }
+
+    .delete-btn {
+        flex-grow: 1;
+        flex-shrink: 1;
+    }
 }  
 
 @media screen and (max-width: 425px) {
