@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 import Auth from '../utils/auth';
 import { ADD_USER } from '../utils/mutations';
 
-// const SignUp = () => {
+
 
     function SignUp(props) {
         const [formState, setFormState] = useState({ email: '', password: '' });
@@ -36,7 +36,7 @@ import { ADD_USER } from '../utils/mutations';
         <>
         <div className="fullscreen-div">
         <div className="btn-parent">
-        <div className="arrow-left"></div></div>
+        <NavLink to='/login'><div className="arrow-left"></div></NavLink></div>
     
             <div className="column">
     
@@ -92,5 +92,5 @@ import { ADD_USER } from '../utils/mutations';
       );
     };
     
-
+  
 export default SignUp;

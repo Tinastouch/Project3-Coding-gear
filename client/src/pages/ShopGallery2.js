@@ -1,5 +1,6 @@
 import React from "react";
-import { Link, NavLink, withRouter } from 'react-router-dom';
+import product2 from "../assets/product2.jpg";
+import { NavLink, withRouter } from 'react-router-dom';
 
 const ShopGallery2 = () => {
 
@@ -19,16 +20,17 @@ const ShopGallery2 = () => {
           <div>
           <div className="shop-card">
               <div className="card-filler">
+                  <img src={product2}></img>
               </div>
   
               <div className="card-footer">
-                  <p className="card-caption">ITEM NAME</p>
-                  <p className="card-caption">ITEM PRICE</p>
+                  <p className="card-caption">MASK</p>
+                  <p className="card-caption">$5.00</p>
               </div>
   
   </div>
   <div className="card-desc">
-      <p className="item-desc">Item Description/Variables</p>
+      <p className="item-desc">BLACK .SHOP() MASK, ONE SIZE FITS ALL, 10x</p>
       <button className="add-to-cart">ADD TO CART</button>
   </div>
   

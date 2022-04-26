@@ -18,11 +18,11 @@ const AppNavbar = ({ location }) => {
   return (
     <>
       <header className="App-header">
-        <h1>
+        <h1 className="blackbox">
           <Link to='/' className="headerh1">.shop()</Link> 
         </h1>
         <div className="navparent">
-        <NavLink to='/' className={`${currentLocation === "/" ? "activenav" : "navheader"}`}>SHOP</NavLink>
+        <NavLink to='/' className={`${currentLocation === '/' ? "activenav" : "navheader"}`}>SHOP</NavLink>
           {Auth.loggedIn() ? (
             <>
               <NavLink to='/user' className={`${currentLocation === "/user" ? "activenav" : "navheader"}`}>ACCOUNT</NavLink>
