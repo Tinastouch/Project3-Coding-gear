@@ -265,7 +265,8 @@ select {
 }
 
 .column {
-    height: 100vh;
+    min-height: 100vh;
+    height: fit-content;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -557,6 +558,10 @@ select {
 
 @media screen and (max-width: 425px) {
 
+    .login-form {
+        align-items: center;
+    }
+
     .shop-card {
         display: flex;
         justify-content: center;
@@ -590,6 +595,7 @@ select {
         padding: 0.3em;
         width: 100%;
     }
+
 
     .arrow-left {
         width: 0;
@@ -633,6 +639,47 @@ flex-shrink: 1;
     }
         
 }  
+
+
+@media screen and (max-width: 320px) {
+
+.shop-card, .mini-shop-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 22vh;
+    width: 35.36vh;
+    border: solid 1px var(--clr-blk);
+    background-color: var(--clr-2nd);
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+    
+}
+
+.card-filler, .mini-card-filler {
+    height: 22vh;
+    width: 35.36vh;
+    background-color: var(--clr-char);
+    border-radius: 15vh;
+    overflow: hidden;
+
+    
+    
+} 
+
+.card-desc {
+    width: 35.36vh;
+}
+
+.cartrow {
+    max-width: 38vh;
+}
+
+.form-input{
+    min-width: 10em;
+}}
+ 
 
 
 
