@@ -558,6 +558,10 @@ select {
 
 @media screen and (max-width: 425px) {
 
+    .submit-btn {
+        width: 100%;
+    }
+
     .login-form {
         align-items: center;
     }
