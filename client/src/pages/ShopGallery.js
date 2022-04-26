@@ -1,6 +1,7 @@
 import React from "react";
 import product1 from "../assets/product1.png"
 import product2 from "../assets/product2.jpg"
+import product3 from "../assets/product3.png"
 import { Link } from 'react-router-dom'
 
 const ShopGallery = () => {
@@ -50,7 +51,7 @@ const ShopGallery = () => {
         <div>
             <div className="mini-shop-card">
                 <div className="mini-card-filler">
-                    <img src={product1}></img>
+                    <img src={product3}></img>
                 </div>
             </div>
             <div className="mini-card-desc">

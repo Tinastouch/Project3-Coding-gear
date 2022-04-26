@@ -1,4 +1,5 @@
 import React from "react";
+import product3 from "../assets/product3.png";
 import { NavLink, withRouter } from 'react-router-dom';
 
 const ShopGallery3 = () => {
@@ -21,6 +22,7 @@ const ShopGallery3 = () => {
           <div>
           <div className="shop-card">
               <div className="card-filler">
+              <img src={product3}></img>
               </div>
   
               <div className="card-footer">
