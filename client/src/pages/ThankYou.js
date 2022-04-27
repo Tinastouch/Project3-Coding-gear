@@ -4,6 +4,32 @@ import { Redirect, Link } from "react-router-dom";
 import Auth from '../utils/auth'
 import { QUERY_USER } from "../utils/queries";
 
+let order = [{name:"Mask", quantity:3}, {name: "Hoodie", quantity:5}];
+let orderString = [];
+
+const OutputOrder = () => {
+
+    {
+        order.map(function(element, index, array) {
+            orderString.push( <>
+                <div className="row">
+                <div className="form-group">
+                    <p className="form-input" spellcheck="false">{element.name} x{element.quantity}</p>
+                    <label className="form-label">#{index+1}</label>
+                </div>
+               
+              
+               </div></>
+
+            );
+          
+        })
+    }  
+    return (
+               <>{orderString}</>
+            )
+}
+
 const ThankYou = () => {
 
    
@@ -24,17 +50,13 @@ const ThankYou = () => {
                 <form className="login-form change-password">
                     <h2 className="tf-h2">THANK YOU</h2> 
                     <div className="form-group">
-                        <p className="form-input" spellcheck="false"></p>
-                        <label className="form-label">E-MAIL</label>
+                        
+                        <label className="form-label text-center">FOR YOUR PURCHASE</label>
                     </div>
                     <div className="form-group">
-                        <input type="password" className="form-input" spellcheck="false"></input>
-                        <label className="form-label">NEW PASSWORD</label>
+                        {OutputOrder()}
                     </div>
-                    <div className="form-group">
-                        <input type="password" className="form-input" spellcheck="false"></input>
-                        <label className="form-label">NEW PASSWORD CONFIRM</label>
-                    </div><Link to='/' className="submit-btn">
+<Link to='/' className="submit-btn">
                     BACK TO SHOP
                     </Link>
                 </form>
