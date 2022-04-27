@@ -19,18 +19,9 @@ db.once('open', async () => {
       name: 'Shop() Generic Hoodie',
       description:
         'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
-      image: '',
+      image: 'product1.png',
       category: categories[0]._id,
       price: 25.99,
-      quantity: 500
-    },
-    {
-      name: 'Shop() Shirt',
-      description:
-        'Praesent sed lacinia mauris. Nulla congue nibh magna, at feugiat nunc scelerisque quis. Donec iaculis rutrum vulputate. Suspendisse lectus sem, vulputate ac lectus sed, placerat consequat dui.',
-      image: '',
-      category: categories[1]._id,
-      price: 20.99,
       quantity: 500
     },
     {
