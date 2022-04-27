@@ -288,6 +288,10 @@ select {
     gap: 0.5em;
 }
 
+.text-right {
+    text-align: right;
+}
+
 .subnav {
     height: 7px;
     width: 7px;
