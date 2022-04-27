@@ -5,10 +5,13 @@ import Auth from '../utils/auth'
 import { QUERY_USER } from "../utils/queries";
 
 const EditUserInfo = () => {
+    
+    const { loading, error, data } = useQuery(QUERY_USER);
+    if (loading) return 'Loading...';
+    if (error) return `Error! ${error.message}`
+    console.log(data.user.email);
 
-   
-
-  return (
+    return (
     <>
     {Auth.loggedIn() ? (
         <>
@@ -24,15 +27,15 @@ const EditUserInfo = () => {
                 <form className="login-form change-password">
                     <h2 className="tf-h2">change password</h2> 
                     <div className="form-group">
-                        <p className="form-input" spellcheck="false"></p>
+                        <p className="form-input" spellCheck="false">{data.user.email}</p>
                         <label className="form-label">E-MAIL</label>
                     </div>
                     <div className="form-group">
-                        <input type="password" className="form-input" spellcheck="false"></input>
+                        <input type="password" className="form-input" spellCheck="false"></input>
                         <label className="form-label">NEW PASSWORD</label>
                     </div>
                     <div className="form-group">
-                        <input type="password" className="form-input" spellcheck="false"></input>
+                        <input type="password" className="form-input" spellCheck="false"></input>
                         <label className="form-label">NEW PASSWORD CONFIRM</label>
                     </div>
                     <input type="submit" className="submit-btn"></input>
