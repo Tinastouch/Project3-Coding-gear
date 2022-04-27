@@ -282,6 +282,12 @@ select {
     justify-content: center;
 }
 
+.gap {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
 .subnav {
     height: 7px;
     width: 7px;
