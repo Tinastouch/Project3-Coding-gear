@@ -22,7 +22,7 @@ import { ADD_USER } from '../utils/mutations';
           });
           const token = mutationResponse.data.addUser.token;
           Auth.login(token);
-        };
+        }; 
       
         const handleChange = (event) => {
           const { name, value } = event.target;
