@@ -104,8 +104,12 @@ const ShopGalleryItem = ({ item }) => {
               </div>
               <div className="card-desc">
                 <p className="item-desc">{description}</p>
-                <p className="item-desc">{quantity} in stock</p>
+
+                <div className="col-rev">
                 {Auth.loggedIn() ? (FancyButton()) : <></>}
+                <p className="item-desc">{quantity} in stock</p>
+                </div>
+
               </div>
 
             </div>

@@ -49,9 +49,9 @@ const ThankYou = () => {
                 <div className="subnav-parent"></div>
     
                 <form className="login-form change-password">
-                    <h2 className="tf-h2">THANK YOU</h2> 
+                    <h2 className="tf-h2">THANK YOU</h2><p className="text-center">{email}</p> 
                     <div className="form-group">
-                        <p className="text-center">{email}</p>
+                        
                         <label className="form-label text-center">FOR YOUR PURCHASE</label>
                     </div>
                     <div className="form-group">
