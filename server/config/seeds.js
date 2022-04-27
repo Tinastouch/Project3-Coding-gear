@@ -16,31 +16,27 @@ db.once('open', async () => {
 
   const products = await Product.insertMany([
     {
-      name: 'Shop() Generic Hoodie',
-      description:
-        'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
-      image: 'product1.png',
+      name: 'Shop() HOODIE',
+      description: "BLACK HOODIE, MENS SIZE MEDIUM",
       category: categories[0]._id,
       price: 25.99,
       quantity: 500
     },
     {
-      name: 'Shop() Mug',
+      name: 'MUG',
       category: categories[2]._id,
-      description:
-        'Donec volutpat erat erat, sit amet gravida justo sodales in. Phasellus tempus euismod urna. Proin ultrices nisi ut ipsum congue, vitae porttitor libero suscipit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam lacinia a nisi non congue.',
-      image: 'toilet-paper.jpg',
-      price: 15.99,
+      description: "COFFEE MUGS 8-12 FL OZ",
+      image: 'product3.png',
+      price: 7.00,
       quantity: 20
     },
     {
-      name: 'Shop () Facemask',
+      name: 'MASK',
       category: categories[2]._id,
-      description:
-        'Praesent placerat, odio vel euismod venenatis, lectus arcu laoreet felis, et fringilla sapien turpis vestibulum nisl.',
-      image: '',
-      price: 8.99,
-      quantity: 50
+      description: "BLACK .SHOP() MASK, ONE SIZE FITS ALL",
+      image: 'product2.png',
+      price: 5.00,
+      quantity: 10
     }
 ]);
 
