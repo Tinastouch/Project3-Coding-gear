@@ -15,7 +15,7 @@ const OutputOrder = () => {
                 <div className="row">
                 <div className="form-group">
                     <p className="form-input" spellcheck="false">{element.name} x{element.quantity}</p>
-                    <label className="form-label">#{index+1}</label>
+                    <label className="form-label text-right">#{index+1}</label>
                 </div>
                
               
@@ -26,7 +26,8 @@ const OutputOrder = () => {
         })
     }  
     return (
-               <>{orderString}</>
+               <><div className="gap">
+               {orderString}</div></>
             )
 }
 
