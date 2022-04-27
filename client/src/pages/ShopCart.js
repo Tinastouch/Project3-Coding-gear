@@ -13,7 +13,7 @@ const ShopCart = () => {
     const [userEmail, setUserEmail] = useState("email");
     const [totalPrice, setTotalPrice] = useState(0);
     // const [getCheckout, { data }] = useLazyQuery(QUERY_CHECKOUT);
-  
+
     // useEffect(() => {
     //   if (data) {
     //     stripePromise.then((res) => {
@@ -21,28 +21,28 @@ const ShopCart = () => {
     //     });
     //   }
     // }, [data]);
-  
-    useEffect(() => {
-    setUserEmail(Auth.getProfile().data.email)
-      async function getCart() {
-        const cart = await idbPromise('cart', 'get');
-        dispatch({ type: ADD_MULTIPLE_TO_CART, products: [...cart] });
-      }
-  
-      if (!state.cart.length) {
-        getCart();
-      }
 
-      function getSum(total, item) {
-        // return total + Math.round(item.price);
-        return total + Number(item.price);
+    useEffect(() => {
+        setUserEmail(Auth.getProfile().data.email)
+        async function getCart() {
+            const cart = await idbPromise('cart', 'get');
+            dispatch({ type: ADD_MULTIPLE_TO_CART, products: [...cart] });
         }
 
-    const total = state.cart.reduce(getSum, 0);
+        if (!state.cart.length) {
+            getCart();
+        }
 
-    setTotalPrice(total)
+        function getSum(total, item) {
+            // return total + Math.round(item.price);
+            return total + Number(item.price);
+        }
 
-      
+        const total = state.cart.reduce(getSum, 0);
+
+        setTotalPrice(total)
+
+
     }, [state.cart.length, dispatch]);
 
     return (
@@ -55,11 +55,11 @@ const ShopCart = () => {
                         </div>
 
                         <div className="column">
-
                             <div className="subnav-parent"></div>
 
                             <form className="login-form change-password">
                                 <h2 className="tf-h2">CART</h2>
+
 
                                 {
                                     state.cart.map((item) => {
@@ -95,6 +95,7 @@ const ShopCart = () => {
 
 
                                 <div className="row flex-end">
+
 
                                     <div className="form-group">
                                         <p className="form-input cart-cat">{totalPrice}</p>
