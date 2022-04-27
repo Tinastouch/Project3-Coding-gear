@@ -96,7 +96,6 @@ const ShopCart = () => {
 
                                 <div className="row flex-end">
 
-
                                     <div className="form-group">
                                         <p className="form-input cart-cat">{totalPrice}</p>
                                         <label className="form-label">TOTAL</label>
