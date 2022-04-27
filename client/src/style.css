@@ -431,6 +431,7 @@ select {
     background-color: var(--clr-blk);
     color: var(--clr-2nd);
     padding-inline: 1em;
+    min-width:7em;
 }
 
 .qty-btn {

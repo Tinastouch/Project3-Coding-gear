@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { NavLink, withRouter } from 'react-router-dom';
 import { Link } from "react-router-dom";
 import { pluralize } from "../utils/helpers"
@@ -42,10 +42,27 @@ const ShopGalleryItem = ({ item }) => {
     }
 
 
-    // do something to indicate that item was added
-
-
   }
+
+  const FancyButton = () => {
+    const initialState = "ADD TO CART";
+    const [buttonText, setButtonText] = useState("ADD TO CART"); //same as creating your state variable where "Next" is the default value for buttonText and setButtonText is the setter function for your state variable instead of setState
+  
+    // the effect
+    useEffect(() => { 
+      if(buttonText !== initialState){
+        setTimeout(() => setButtonText(initialState), [1000])
+      }
+    }, [buttonText])
+  
+    const changeText = (text) => setButtonText(text);
+  
+    return (
+      <button type="button" className="add-to-cart" onClick={() => {changeText("ADDED");
+        addToCart()}}>{buttonText}</button>
+    )
+  };
+
   return (
     <>
       <div className="fullscreen-div">
@@ -88,7 +105,7 @@ const ShopGalleryItem = ({ item }) => {
               <div className="card-desc">
                 <p className="item-desc">{description}</p>
                 <p className="item-desc">{quantity} in stock</p>
-                <button className="add-to-cart" onClick={addToCart}>ADD TO CART</button>
+                {FancyButton()}
               </div>
 
             </div>
