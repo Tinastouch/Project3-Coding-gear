@@ -9,6 +9,7 @@ import ShopGallery2 from './pages/ShopGallery2';
 import ShopGallery3 from './pages/ShopGallery3';
 import ShopGalleryItem from './pages/ShopGalleryItem';
 import ShopCart from './pages/ShopCart';
+import ThankYou from './pages/ThankYou';
 import LoginPage from './pages/Login';
 import SignUp from './pages/SignUp';
 import EditUserInfo from './pages/EditUserInfo';
@@ -74,6 +75,7 @@ function App() {
             <Route exact path="/login" component={LoginPage} />
             <Route exact path="/signup" component={SignUp} />
             <Route exact path="/user" component={EditUserInfo} />
+            <Route exact path="/thankyou" component={ThankYou} />
             <Route render={() => <h1 className="display-2">Wrong page!</h1>} />
           </Switch>
           </StoreProvider>
