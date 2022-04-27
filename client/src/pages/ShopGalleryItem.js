@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { NavLink, withRouter } from 'react-router-dom';
-import { Link } from "react-router-dom";
+import Auth from '../utils/auth'
 import { pluralize } from "../utils/helpers"
 import { useStoreContext } from "../utils/GlobalState";
 import { ADD_TO_CART, UPDATE_CART_QUANTITY } from "../utils/actions";
@@ -105,7 +105,7 @@ const ShopGalleryItem = ({ item }) => {
               <div className="card-desc">
                 <p className="item-desc">{description}</p>
                 <p className="item-desc">{quantity} in stock</p>
-                {FancyButton()}
+                {Auth.loggedIn() ? (FancyButton()) : <></>}
               </div>
 
             </div>
