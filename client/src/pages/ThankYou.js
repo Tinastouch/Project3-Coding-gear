@@ -26,7 +26,8 @@ const OutputOrder = () => {
         })
     }  
     return (
-               <>{orderString}</>
+               <><div className="gap">
+               {orderString}</div></>
             )
 }
 
