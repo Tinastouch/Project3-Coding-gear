@@ -33,7 +33,7 @@ const OutputOrder = () => {
 
 const ThankYou = () => {
 
-   
+    const email = Auth.getProfile().data.email
 
   return (
     <>
@@ -51,7 +51,7 @@ const ThankYou = () => {
                 <form className="login-form change-password">
                     <h2 className="tf-h2">THANK YOU</h2> 
                     <div className="form-group">
-                        
+                        <p className="text-center">{email}</p>
                         <label className="form-label text-center">FOR YOUR PURCHASE</label>
                     </div>
                     <div className="form-group">

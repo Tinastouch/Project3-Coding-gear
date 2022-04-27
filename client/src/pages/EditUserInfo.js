@@ -1,15 +1,34 @@
-import { useQuery } from "@apollo/react-hooks";
-import React from "react";
+import { useMutation } from "@apollo/react-hooks";
+import React, { useState } from "react";
 import { Redirect } from "react-router-dom";
 import Auth from '../utils/auth'
-import { QUERY_USER } from "../utils/queries";
+import { UPDATE_USER } from "../utils/mutations";
 
 const EditUserInfo = () => {
     
-    const { loading, error, data } = useQuery(QUERY_USER);
-    if (loading) return 'Loading...';
-    if (error) return `Error! ${error.message}`
-    console.log(data.user.email);
+    const email = Auth.getProfile().data.email
+
+    /* const [formState, setFormState] = useState({ password: '' });
+    const [updateUser] = useMutation(UPDATE_USER);
+
+    const handleFormSubmit = async (event) => {
+        event.preventDefault();
+
+        const mutationResponse = await updateUser({
+            variables: {
+                password: formState.password,
+            },
+        });
+        const token = mutationResponse.data.updateUser.token;
+    };
+
+    const handleChange = (event) => {
+        const { name, value } = event.target;
+        setFormState({
+            ...formState,
+            [name]: value,
+        });
+    }; */
 
     return (
     <>
@@ -27,15 +46,24 @@ const EditUserInfo = () => {
                 <form className="login-form change-password">
                     <h2 className="tf-h2">change password</h2> 
                     <div className="form-group">
-                        <p className="form-input" spellCheck="false">{data.user.email}</p>
+                        <p className="form-input" spellCheck="false">{email}</p>
                         <label className="form-label">E-MAIL</label>
                     </div>
                     <div className="form-group">
-                        <input type="password" className="form-input" spellCheck="false"></input>
+                        <input type="password" 
+                        className="form-input" 
+                        spellCheck="false" 
+                        id="password"
+                        name="password"
+                        placeholder="*****"></input>
                         <label className="form-label">NEW PASSWORD</label>
                     </div>
                     <div className="form-group">
-                        <input type="password" className="form-input" spellCheck="false"></input>
+                        <input type="password" 
+                        className="form-input" 
+                        spellCheck="false" 
+                        id="confirm-password"
+                        placeholder="*****"></input>
                         <label className="form-label">NEW PASSWORD CONFIRM</label>
                     </div>
                     <input type="submit" className="submit-btn"></input>
