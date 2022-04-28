@@ -95,8 +95,9 @@ select {
 }
 
 .full-height {
-    display: block;
+    display: flex;
     height: 100%;
+    min-height: 3em;
     
 }
 
