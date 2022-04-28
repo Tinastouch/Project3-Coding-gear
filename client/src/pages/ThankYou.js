@@ -4,32 +4,32 @@ import { Redirect, Link } from "react-router-dom";
 import Auth from '../utils/auth'
 import { QUERY_USER } from "../utils/queries";
 
-let order = [{name:"Mask", quantity:3}, {name: "Hoodie", quantity:5}];
-let orderString = [];
+// let order = [{name:"Mask", quantity:1}, {name: "Hoodie", quantity:5}];
+// let orderString = [];
 
-const OutputOrder = () => {
+// const OutputOrder = () => {
 
-    {
-        order.map(function(element, index, array) {
-            orderString.push( <>
-                <div className="row">
-                <div className="form-group">
-                    <p className="form-input" spellcheck="false">{element.name} x{element.quantity}</p>
-                    <label className="form-label text-right">#{index+1}</label>
-                </div>
+//     {
+//         order.map(function(item, index, array) {
+//             orderString.push( <>
+//                 <div className="row">
+//                 <div className="form-group">
+//                     <p className="form-input" spellcheck="false">{item.name} x{item.quantity}</p>
+//                     <label className="form-label text-right">#{index+1}</label>
+//                 </div>
                
               
-               </div></>
+//                </div></>
 
-            );
+//             );
           
-        })
-    }  
-    return (
-               <><div className="gap">
-               {orderString}</div></>
-            )
-}
+//         })
+//     }  
+//     return (
+//                <><div className="gap">
+//                {orderString}</div></>
+//             )
+// }
 
 const ThankYou = () => {
 
@@ -55,7 +55,7 @@ const ThankYou = () => {
                         <label className="form-label text-center">FOR YOUR PURCHASE</label>
                     </div>
                     <div className="form-group">
-                        {OutputOrder()}
+                        {/* {OutputOrder()} */}
                     </div>
 <Link to='/' className="submit-btn">
                     BACK TO SHOP

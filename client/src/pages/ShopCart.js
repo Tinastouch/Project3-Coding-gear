@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Redirect } from "react-router-dom";
+import { Redirect, Link } from "react-router-dom";
 import Auth from '../utils/auth'
 // import { loadStripe } from '@stripe/stripe-js';
 // import { useLazyQuery } from '@apollo/client';
@@ -7,13 +7,14 @@ import Auth from '../utils/auth'
 import { idbPromise } from '../utils/helpers';
 import { useStoreContext } from '../utils/GlobalState';
 import { TOGGLE_CART, ADD_MULTIPLE_TO_CART } from '../utils/actions';
+import { REMOVE_FROM_CART, UPDATE_CART_QUANTITY } from "../utils/actions";
 
 const ShopCart = () => {
     const [state, dispatch] = useStoreContext();
     const [userEmail, setUserEmail] = useState("email");
     const [totalPrice, setTotalPrice] = useState(0);
     // const [getCheckout, { data }] = useLazyQuery(QUERY_CHECKOUT);
-  
+
     // useEffect(() => {
     //   if (data) {
     //     stripePromise.then((res) => {
@@ -21,28 +22,37 @@ const ShopCart = () => {
     //     });
     //   }
     // }, [data]);
-  
-    useEffect(() => {
-    setUserEmail(Auth.getProfile().data.email)
-      async function getCart() {
-        const cart = await idbPromise('cart', 'get');
-        dispatch({ type: ADD_MULTIPLE_TO_CART, products: [...cart] });
-      }
-  
-      if (!state.cart.length) {
-        getCart();
-      }
 
-      function getSum(total, item) {
-        // return total + Math.round(item.price);
-        return total + Number(item.price);
+    const removeFromCart = item => {
+        dispatch({
+          type: REMOVE_FROM_CART,
+          _id: item._id
+        });
+        idbPromise('cart', 'delete', { ...item });
+    
+      };
+
+    useEffect(() => {
+        setUserEmail(Auth.getProfile().data.email)
+        async function getCart() {
+            const cart = await idbPromise('cart', 'get');
+            dispatch({ type: ADD_MULTIPLE_TO_CART, products: [...cart] });
         }
 
-    const total = state.cart.reduce(getSum, 0);
+        if (!state.cart.length) {
+            getCart();
+        }
 
-    setTotalPrice(total)
+        function getSum(total, item) {
+            // return total + Math.round(item.price);
+            return total + Number(item.price);
+        }
 
-      
+        const total = state.cart.reduce(getSum, 0);
+
+        setTotalPrice(total)
+
+
     }, [state.cart.length, dispatch]);
 
     return (
@@ -55,7 +65,6 @@ const ShopCart = () => {
                         </div>
 
                         <div className="column">
-
                             <div className="subnav-parent"></div>
 
                             <form className="login-form change-password">
@@ -87,7 +96,8 @@ const ShopCart = () => {
                                                         <p className="form-input cart-cat">{1 * item.price}</p>
                                                         <label className="form-label">TOTAL</label>
                                                     </div>
-                                                    <button type="delete" className="add-to-cart">DELETE ITEM</button></div>
+                                                    <button type="delete" className="add-to-cart" onClick={()=>removeFromCart(item)}>DELETE ITEM</button></div>
+
                                             </>
                                         )
                                     })
@@ -101,8 +111,8 @@ const ShopCart = () => {
                                         <p className="form-input cart-cat">{totalPrice}</p>
                                         <label className="form-label">TOTAL</label>
                                     </div>
-                                    <button type="delete" className="add-to-cart checkout">CHECKOUT</button></div>
-
+                                    <Link to='/thankyou'  type="delete" className="add-to-cart checkout">CHECKOUT</Link></div>
+            
                             </form>
 
                             <div className="subnav-parent">

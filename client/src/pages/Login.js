@@ -66,6 +66,11 @@ function Login(props) {
             </input>
             <label className="form-label">PASSWORD</label>
         </div>
+        {error ? (
+          <div>
+            <p className="error-text">The provided credentials are incorrect</p>
+          </div>
+        ) : null}
         <input type="submit" className="submit-btn"></input>
     </form>
 
