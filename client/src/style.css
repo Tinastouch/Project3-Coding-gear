@@ -94,6 +94,12 @@ select {
     flex-wrap: wrap;
 }
 
+.full-height {
+    display: block;
+    height: 100%;
+    
+}
+
 .grid {
     display: grid;
     gap: 1rem;

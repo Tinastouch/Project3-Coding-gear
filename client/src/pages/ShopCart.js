@@ -111,7 +111,7 @@ const ShopCart = () => {
                                         <p className="form-input cart-cat">{totalPrice}</p>
                                         <label className="form-label">TOTAL</label>
                                     </div>
-                                    <Link to='/thankyou'  type="delete" className="add-to-cart checkout">CHECKOUT</Link></div>
+                                    <Link to='/thankyou' className="full-height"><button className="add-to-cart checkout">CHECKOUT</button></Link></div>
             
                             </form>
 
