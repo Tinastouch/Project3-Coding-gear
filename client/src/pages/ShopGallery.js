@@ -55,7 +55,7 @@ const ShopGallery = () => {
                 </div>
             </div>
             <div className="mini-card-desc">
-                <p className="form-label">PRODUCT 3</p>
+                <p className="form-label">CODE MUG</p>
             </div>
         </div>
     </Link>

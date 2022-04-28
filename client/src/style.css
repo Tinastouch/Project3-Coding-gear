@@ -282,6 +282,16 @@ select {
     justify-content: center;
 }
 
+.gap {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+.text-right {
+    text-align: right;
+}
+
 .subnav {
     height: 7px;
     width: 7px;
@@ -337,6 +347,12 @@ select {
     gap: 1em;
 }
 
+.col-rev {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
 .signup-form {
     display: flex;
     flex-direction: column;
@@ -376,7 +392,12 @@ select {
     border: none;
     margin-top: 0.5em;
     text-transform: uppercase;
+    text-align: center;
     padding: 0.3em;
+}
+
+.text-center {
+    text-align: center;
 }
 
 .shop-card {
@@ -418,7 +439,7 @@ select {
     padding-top: 0.3em;
     display:flex;
     justify-content: space-between;
-    align-items: center;
+    
 }
 
 .item-desc {
@@ -431,6 +452,7 @@ select {
     background-color: var(--clr-blk);
     color: var(--clr-2nd);
     padding-inline: 1em;
+    min-width:7em;
 }
 
 .qty-btn {

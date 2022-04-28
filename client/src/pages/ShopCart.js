@@ -65,10 +65,10 @@ const ShopCart = () => {
                                     state.cart.map((item) => {
                                         return (
                                             <>
-                                                <div className="row">
+                                                <div className="row cartrow">
                                                     <div className="form-group">
-                                                        <p className="form-input" spellcheck="false">{userEmail}</p>
-                                                        <label className="form-label">{item.name}</label>
+                                                        <p className="form-input" spellcheck="false">{item.name}</p>
+                                                        <label className="form-label">ITEM NAME</label>
                                                     </div>
                                                     <div className="form-group">
                                                         <p className="form-input cart-cat">{item.price}</p>
