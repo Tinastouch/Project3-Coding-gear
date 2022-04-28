@@ -1,8 +1,8 @@
-# Book-Lookup
+# .shop() E-Commerce SPA
 
 ## Description
 
-This application is a Google Books API search engine that utilizes a GraphQL API built with Apollo Server. The user can create an account, lookup books, and save any books they are interested in.
+This application is an e-commerce SPA built for a clothing line for coders named .shop(). It utilizes MongoDB for a cloud database and GraphQL as a query language for the backend, while the front end is built using the React framework. This application will allow coders to buy personalized items that relate to their careers, and will also introduce the concepts to others who may not be programmers!
 
 ## Table of Contents
 
@@ -11,7 +11,7 @@ This application is a Google Books API search engine that utilizes a GraphQL API
 - [Built With](#built-with)
 - [Screenshots](#screenshots)
 - [Link to Deployed Application](#link-to-deployed-application)
-- [Questions](#questions)
+- [Collaborators](#collaborators)
 
 ## Installation
 
@@ -23,7 +23,7 @@ To use this application following installation, run the following commands from 
 
 - Install dependencies: `npm install`
 
-- To start the server: `node server.js`
+- To start the development server: `npm run develop`
 
 IMPORTANT: You must have Node.js to use this application!
 
@@ -40,15 +40,30 @@ IMPORTANT: You must have Node.js to use this application!
 
 ## Screenshots
 
-![screenshot-cryptic-lowlands-78177 herokuapp com-2022 04 16-21_32_11](https://user-images.githubusercontent.com/91770168/163696539-e6a5a7c0-d6c6-45ac-b642-e94d994ef748.jpg)
+### Shop Page
+![Shop-page](https://user-images.githubusercontent.com/91770168/165858042-94ceecbb-7bed-494b-83ed-03a81ce54eb3.jpg)
 
-![screenshot-cryptic-lowlands-78177 herokuapp com-2022 04 16-21_32_54](https://user-images.githubusercontent.com/91770168/163696531-b82de067-1fb7-41a5-b6a9-e961e286e45f.jpg)
+### Signup Page
+![sign-up](https://user-images.githubusercontent.com/91770168/165858198-c6356467-bc92-48a2-9795-6dfff9e596af.jpg)
+
+### Login Page
+![login-page](https://user-images.githubusercontent.com/91770168/165858176-16c15f21-245f-463b-a0c6-49ecad784e9c.jpg)
+
+### Cart Page
+![cart-page](https://user-images.githubusercontent.com/91770168/165858232-9c760c92-b422-46ed-9ab7-e11980f932cd.jpg)
+
+### Account Page
+![account-page](https://user-images.githubusercontent.com/91770168/165858208-0058eed9-2594-4d82-a17d-68310574fe71.jpg)
 
 ## Link to Deployed Application
 
-https://cryptic-lowlands-78177.herokuapp.com/
+https://frozen-shelf-60145.herokuapp.com/
 
-## Questions
+## Collaborators
+- Steve Dusome
+- Ian Wiffin
+- Tina Sutherland
+- Conor Bergauer
 
-If you have any questions, feel free to contact me at cnb10100@gmail.com!
+
 
