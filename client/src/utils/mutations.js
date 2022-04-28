@@ -49,7 +49,16 @@ export const ADD_ORDER = gql`
       }
     }
   }
+`
+
+export const DELETE_ITEM = gql`
+mutation DeleteItem($id: String!) {
+    deleteItem(_id: $id) {
+        _id
+    }
+}
 `;
+
 
 // export const REMOVE_BOOK = gql`
 //   mutation removeBook($bookId: String!) {

@@ -67,7 +67,7 @@ const ShopGalleryItem = ({ item }) => {
     <>
       <div className="fullscreen-div">
         {
-          (_id == "2" || _id == "3")
+          (_id === "2" || _id === "3")
             ? (
               <>
                 <div className="btn-parent">
@@ -118,17 +118,17 @@ const ShopGalleryItem = ({ item }) => {
 
           <div className="subnav-parent">
             {
-              (_id == "1")
+              (_id === "1")
                 ? (<div className="subnav subnav-active"></div>)
                 : (<div className="subnav"></div>)
             }
             {
-              (_id == "2")
+              (_id === "2")
                 ? (<div className="subnav subnav-active"></div>)
                 : (<div className="subnav"></div>)
             }
             {
-              (_id == "3")
+              (_id === "3")
                 ? (<div className="subnav subnav-active"></div>)
                 : (<div className="subnav"></div>)
             }
@@ -138,7 +138,7 @@ const ShopGalleryItem = ({ item }) => {
 
 
         {
-          (_id == "1" || _id == "2")
+          (_id === "1" || _id === "2")
             ? (
               <>
                 <div className="btn-parent" >

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Redirect } from "react-router-dom";
+import { Redirect, Link } from "react-router-dom";
 import Auth from '../utils/auth'
 // import { loadStripe } from '@stripe/stripe-js';
 // import { useLazyQuery } from '@apollo/client';
@@ -7,6 +7,7 @@ import Auth from '../utils/auth'
 import { idbPromise } from '../utils/helpers';
 import { useStoreContext } from '../utils/GlobalState';
 import { TOGGLE_CART, ADD_MULTIPLE_TO_CART } from '../utils/actions';
+import { REMOVE_FROM_CART, UPDATE_CART_QUANTITY } from "../utils/actions";
 
 const ShopCart = () => {
     const [state, dispatch] = useStoreContext();
@@ -21,6 +22,15 @@ const ShopCart = () => {
     //     });
     //   }
     // }, [data]);
+
+    const removeFromCart = item => {
+        dispatch({
+          type: REMOVE_FROM_CART,
+          _id: item._id
+        });
+        idbPromise('cart', 'delete', { ...item });
+    
+      };
 
     useEffect(() => {
         setUserEmail(Auth.getProfile().data.email)
@@ -86,7 +96,8 @@ const ShopCart = () => {
                                                         <p className="form-input cart-cat">{1 * item.price}</p>
                                                         <label className="form-label">TOTAL</label>
                                                     </div>
-                                                    <button type="delete" className="add-to-cart">DELETE ITEM</button></div>
+                                                    <button type="delete" className="add-to-cart" onClick={()=>removeFromCart(item)}>DELETE ITEM</button></div>
+
                                             </>
                                         )
                                     })
@@ -100,8 +111,8 @@ const ShopCart = () => {
                                         <p className="form-input cart-cat">{totalPrice}</p>
                                         <label className="form-label">TOTAL</label>
                                     </div>
-                                    <button type="delete" className="add-to-cart checkout">CHECKOUT</button></div>
-
+                                    <Link to='/thankyou'  type="delete" className="add-to-cart checkout">CHECKOUT</Link></div>
+            
                             </form>
 
                             <div className="subnav-parent">
