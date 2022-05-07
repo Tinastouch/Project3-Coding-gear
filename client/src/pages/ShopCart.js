@@ -30,7 +30,15 @@ const ShopCart = () => {
         });
         idbPromise('cart', 'delete', { ...item });
     
-      };
+    };
+
+    const updateQuantity = item => {
+        dispatch({
+            type: UPDATE_CART_QUANTITY,
+            _id: item._id
+        });
+        idbPromise('cart', 'update', { ...item });
+    };
 
     useEffect(() => {
         setUserEmail(Auth.getProfile().data.email)
@@ -84,11 +92,15 @@ const ShopCart = () => {
                                                         <p className="form-input cart-cat">{item.price}</p>
                                                         <label className="form-label">PRICE</label>
                                                     </div>
+                                                    {/* {function Quantity({ item, dispatch }) {
+                                                        return (
+                                                            
+                                                    )}} */}
                                                     <div className="form-group">
                                                         <p className="form-input cart-cat">
-                                                            <button className="qty-btn"><p className="negativemarg">-</p></button>
-                                                            1
-                                                            <button className="qty-btn"><p className="negativemarg">+</p></button>
+                                                            <button className="qty-btn" onClick={() => dispatch({ type: 'DECREMENT' })}><p className="negativemarg">-</p></button>
+                                                            <p>{item.quantity}</p>
+                                                            <button className="qty-btn" onClick={() => dispatch({ type: 'INCREMENT' })}><p className="negativemarg">+</p></button>
                                                         </p>
                                                         <label className="form-label">QUANTITY</label>
                                                     </div>

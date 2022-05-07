@@ -42,7 +42,7 @@ export const reducer = (state, action) => {
           }
           return product
         })
-      };
+      }; 
 
     case REMOVE_FROM_CART:
       let newState = state.cart.filter(product => {
